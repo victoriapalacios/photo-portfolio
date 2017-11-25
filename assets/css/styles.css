@@ -1,0 +1,268 @@
+/*Typography*/
+li, a, p, h1, h2, .input, .textarea, .button {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  font-weight: 100;
+}
+
+a {
+  cursor: pointer;
+  color: #3b3a3c;
+}
+
+/*Navigation*/
+.desktop-nav {
+  width: 80px;
+  height: 100%;
+  border-right: 1px solid #F8F8F8; /*Super Light Grey*/
+  white-space: nowrap;
+  position: fixed;
+  background-color: #FFFFFF;
+  top: 0;
+  z-index: 10000;
+}
+
+.desktop-nav-items {
+  transform: rotate(-90deg);
+  position: relative;
+  top: 60%;
+  text-transform: uppercase;
+  font-size: 12px;
+  /*transform-origin: left top 0;*/
+}
+
+.desktop-nav li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.selected {
+  border-bottom: 2px solid #3b3a3c;
+  font-weight: 700;
+}
+
+
+/*HOMEPAGE BLURBS*/
+.main-header {
+  z-index: 1000000;
+  text-transform: uppercase;
+  font-size: 30px;
+  letter-spacing: 65px;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;  /* position the top  edge of the element at the middle of the parent */
+  left: 50%; /* position the left edge of the element at the middle of the parent */
+  transform: translate(-50%, -50%);
+  padding-left: 90px;
+  color: #FFFFFF;
+}
+
+.blurbs {
+  position: absolute;
+  z-index: 100000000;
+  margin-left: 115px;
+  bottom: 25px;
+}
+
+.blurbs p {
+  max-width: 180px;
+  margin-right: 50px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+  color: #FFFFFF;
+}
+
+.blurbs a {
+  color: #FFFFFF;
+}
+
+.blurbs b {
+  font-weight: 800;
+}
+
+.first {
+  margin-right: 65px !important;
+}
+
+/*HOMEPAGE SLIDER*/
+
+  #photoShow div {
+    position:absolute;
+    z-index: 0;
+  }
+  #photoShow div.previous {
+    z-index: 1;
+  }
+  #photoShow div.current {
+    z-index: 2;
+  }
+
+  .gallery-container {
+    width: 100%;
+    height: 100%;
+    /*margin-left: 80px;*/
+  }
+
+  .gallery {
+    display: block;
+    width: 100%;
+    height: 500px;
+  }
+
+  .gallery-image {
+    height: 100%;
+    width: 100%;
+  }
+
+
+/*Image Gallery*/
+img {
+  margin-bottom: 25px;
+}
+
+.image-gallery {
+  max-width: 1600px;
+}
+
+.tabs li {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+
+
+.tabs li.is-active a {
+    color: #3b3a3c;
+    font-weight: 700;
+    padding: 0px;
+    border-bottom: 2px solid #3b3a3c;
+    margin: 0 10px;
+}
+
+.tabs a {
+  margin: 0 15px;
+  border-bottom: 0;
+  padding: .5em 0;
+}
+
+.tabs ul {
+  border-bottom: 0;
+}
+
+/*ABOUT*/
+.about {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.about p {
+  line-height: 25px;
+}
+
+.about a {
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 300;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+/*CONTACT*/
+.input, .textarea {
+  border: none;
+  border-bottom: 3px solid #F8F8F8;
+  box-shadow: none;
+}
+
+.input:focus, .textarea:focus {
+  outline: none;
+  border: none;
+  border-bottom: 3px solid #3b3a3c;
+  border-radius: 0;
+}
+
+
+
+.textarea {
+  resize: none;
+  background-color: #F8F8F8;
+}
+
+.button {
+  background-color: #3b3a3c !important;
+  text-transform: uppercase;
+  border-radius: 0 !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  width: 90px;
+  height: 40px;
+}
+
+/*MEDIA QUERIES*/
+
+@media only screen and (max-width: 1024px) {
+    .desktop-nav, .blurbs {
+      display: none;
+    }
+
+    .navbar {
+      display: block;
+    }
+
+    .logo {
+      margin: 14px;
+      width: 21px;
+    }
+
+    .main-header {
+      font-size: 24px;
+      letter-spacing: 30px;
+      padding-left: 0;
+    }
+
+    .gallery-container {
+      height: calc(100% - 52px);
+    }
+
+    .navbar-start li {
+      padding: 50px 20px;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    .image-gallery {
+      margin: 25px;
+    }
+
+}
+
+@media only screen and (min-width: 1024px) {
+    .desktop-nav, .blurbs {
+      display: block;
+    }
+
+    .gallery-container {
+      margin-right: 80px;
+    }
+
+    .navbar {
+      display: none;
+    }
+
+    .logo {
+      padding: 28px;
+      position: fixed;
+      width: 80px;
+    }
+
+    .image-gallery {
+    margin: 25px 25px 25px 105px;
+}
