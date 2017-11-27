@@ -225,7 +225,7 @@ h2 {
     .main-header {
       font-size: 24px;
       letter-spacing: 30px;
-      padding-left: 0;
+      padding-left: 25px;
     }
 
     .gallery-container {
